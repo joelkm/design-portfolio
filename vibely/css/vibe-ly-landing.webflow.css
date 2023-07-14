@@ -757,4 +757,29 @@ p {
   }
 }
 
+/* EDITED 
+- Logo id
+- Logo onclick reload
+- Nav social logos
+- Bottom social logos
+- INclude social img files
+- Change favicon (from x-icon.png to logo)
+- CSS below
+*/
 
+#logo {
+  cursor: pointer;
+}
+
+.social, .download, .patchs {
+  transition: 500ms;
+}
+
+
+.social:hover, .download:hover, .patchs:hover {
+  box-shadow: 0px 0px 0px 0px #26d289, 0px 0px #000 !important;
+  /*box-shadow: -5px 5px 0 -3px #26d289, -5px 5px #000;*/
+
+
+  transform: translate(-6px, 6px);
+}
