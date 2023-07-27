@@ -10,6 +10,7 @@ html {
   -ms-text-size-adjust: 100%;
   /* 2 */
   -webkit-text-size-adjust: 100%;
+  overflow-x: hidden;
   /* 2 */
 }
 /**
@@ -17,6 +18,9 @@ html {
  */
 body {
   margin: 0;
+  width: 100vw;
+  overflow-x: hidden;
+
 }
 .container {
   width: 100vw;

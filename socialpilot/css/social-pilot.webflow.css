@@ -53,7 +53,7 @@ h2 {
 
 .hero {
   width: 90%;
-  height: 100vh;
+  height: 120vh;
   justify-content: center;
   align-items: center;
   display: flex;
@@ -623,12 +623,16 @@ h2 {
     left: 45vw;
     top: 5px;
   }
+  .testimonial {
+    flex-direction: column;
+    width: 80vw !important;
+  }
+  .testimonial div {
+    width: 100% !important;
+  }
 }
 
 @media screen and (max-width: 767px) {
-  .heading {
-    font-size: 48px;
-  }
 
   .div-block-8 {
     height: auto;
@@ -645,12 +649,21 @@ h2 {
   .div-block-12, .div-block-13 {
     flex-direction: column;
   }
+
+  .splide__arrow--next, .splide__arrow--prev {
+    display: none !important;
+  }
+  .hero {
+    margin-top: 80px !important;
+  }
+  h1 {
+    font-size: 32px !important;
+    line-height: 40px !important;
+  }
 }
 
+
 @media screen and (max-width: 479px) {
-  .heading {
-    font-size: 40px;
-  }
 
   .feature {
     width: 90%;
@@ -658,6 +671,9 @@ h2 {
 
   .plan-card {
     width: 80%;
+  }
+  .testimonial p {
+    font-size: 24px;
   }
 }
 
@@ -725,4 +741,58 @@ transition-timing-function: ease;
 a.icon {
   color: #000;
   display: none;
+}
+
+.splide__slide {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.testimonial {
+  background-color: #EBF1FF;
+  min-height: 300px;
+  width: 800px;
+  min-width: 250px;
+  border-radius: 20px;
+  padding: 30px 50px;
+  display: flex;
+}
+
+.testimonial p {
+  font-family: Inter, sans-serif;
+  font-size: 24px;
+  align-self: start;
+  line-height: 30px;}
+
+.testimonial div {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.splide__arrow--next {
+  right: 600px !important;
+}
+.splide__arrow--prev {
+  left: 600px !important;
+}
+
+.bg-image {
+  overflow: hidden;
+}
+
+button.is-active {
+  background: rgb(143,179,255);
+  background: linear-gradient(135deg, rgba(143,179,255,1) 0%, rgba(212,29,109,1) 100%) !important;
+}
+
+.splide {
+  z-index: 0;
+}
+
+.nav, .nav-shadow {
+  z-index: 999;
 }
