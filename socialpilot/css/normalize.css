@@ -18,6 +18,9 @@ html {
 body {
   margin: 0;
 }
+.container {
+  width: 100vw;
+}
 /* HTML5 display definitions
    ========================================================================== */
 /**

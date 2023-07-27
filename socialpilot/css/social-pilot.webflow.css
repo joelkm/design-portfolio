@@ -470,7 +470,7 @@ h2 {
 }
 
 .hover-social {
-  z-index: -1;
+  z-index: 1;
   height: 30px;
   max-height: 100%;
   position: absolute;
@@ -489,7 +489,7 @@ h2 {
   height: 80px;
 }
 
-@media screen and (max-width: 991px) {
+@media screen and (max-width: 1200px) {
   .container {
     color: #000;
   }
@@ -587,6 +587,42 @@ h2 {
     background-color: #fff;
     border: 1px solid #d1d1d1;
   }
+
+  a.icon {
+    display: block !important;
+    position: absolute;
+    z-index:999;
+    right: 40px;
+    top: 30px;
+  }
+
+  .div-block {
+    flex-direction: column;
+    overflow: hidden;
+    background-color: #ffffff;
+    position: absolute;
+    height: 400px;
+    align-self: start;
+    width: 80vw;
+    right: 0px;
+    top: 0px;
+    border: solid 1px rgb(202, 202, 202);
+    padding-bottom: 40px;
+  }
+
+  .div-block ul{
+    flex-direction: column;
+  }
+
+  .socials{
+    align-self: center;
+  }
+
+  #logo {
+    position: absolute;
+    left: 45vw;
+    top: 5px;
+  }
 }
 
 @media screen and (max-width: 767px) {
@@ -626,3 +662,67 @@ h2 {
 }
 
 
+/* CHANGES 
+
+- Media query l.492: 991 -> 1200
+- 
+- HTML: Copy socials from nav into contact
+
+*/
+
+.primary, .secondary {
+transition: 200ms;
+transition-timing-function: ease;
+}
+.primary:hover {
+  background-color: #b3caff;
+  box-shadow: none;
+}
+
+.secondary:hover {
+  background-color: #ff73b0;
+  box-shadow: none;
+}
+
+.social-logo {
+  transition: 200ms;
+  transition-timing-function: ease;
+  z-index: 2;
+}
+.social-logo:hover {
+  opacity: 0%;
+}
+
+.link {
+  position: relative;
+  z-index: 9999;
+}
+
+.link::before {
+  content: "";
+  position: absolute;
+  display: block;
+  width: 100%;
+  height: 2px;
+  bottom: -3px;
+  left: 0;
+  background: rgb(143,179,255);
+  background: linear-gradient(90deg, rgba(143,179,255,1) 0%, rgba(212,29,109,1) 100%);
+  transform: scaleX(0);
+  transition: transform 0.3s ease;
+}
+
+.link:hover::before {
+  transform: scaleX(1);
+}
+
+.grad-highlight {
+  background: -webkit-linear-gradient(-45deg, rgba(143,179,255,1) 0%, rgba(212,29,109,1) 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
+
+a.icon {
+  color: #000;
+  display: none;
+}
